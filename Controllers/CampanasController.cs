@@ -9,8 +9,30 @@ public class CampanasController : Controller
         new Campania { Id=2, Nombre="Moda Verano", Categoria="Moda", Estado="Próxima", Canal="App", DescuentoPct=15, FechaInicio=DateTime.Now.AddDays(10), FechaFin=DateTime.Now.AddDays(20), Descripcion="Ropa verano" }
     };
 
-    public IActionResult Index()
+    public IActionResult Index(string categoria, string estado)
     {
-        return View(campanias);
+        var resultado = campanias.AsEnumerable();
+
+        if (!string.IsNullOrEmpty(categoria))
+            resultado = resultado.Where(c => c.Categoria == categoria);
+
+        if (!string.IsNullOrEmpty(estado))
+            resultado = resultado.Where(c => c.Estado == estado);
+
+        ViewData["categoria"] = categoria;
+        ViewData["estado"] = estado;
+
+        return View(resultado.ToList());
     }
+
+    public IActionResult Detalle(int id)
+    {
+    var campana = campanias.FirstOrDefault(c => c.Id == id);
+    if (campana == null)
+        return NotFound(); // o puedes mostrar un mensaje de "no encontrado"
+
+    return View(campana);
+    }
+
+    
 }
