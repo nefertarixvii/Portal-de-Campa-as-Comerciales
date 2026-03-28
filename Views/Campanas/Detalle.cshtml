@@ -1,0 +1,14 @@
+@model PortalCampanas.Models.Campania
+
+<h2>Detalle de Campaña</h2>
+
+<p><strong>Nombre:</strong> @Model.Nombre</p>
+<p><strong>Categoría:</strong> @Model.Categoria</p>
+<p><strong>Estado:</strong> @Model.Estado</p>
+<p><strong>Canal:</strong> @Model.Canal</p>
+<p><strong>Descuento:</strong> @Model.DescuentoPct %</p>
+<p><strong>Inicio:</strong> @Model.FechaInicio</p>
+<p><strong>Fin:</strong> @Model.FechaFin</p>
+<p><strong>Descripción:</strong> @Model.Descripcion</p>
+
+<a asp-action="Index">Volver</a>
