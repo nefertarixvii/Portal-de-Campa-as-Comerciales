@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+
+# Build
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Rider
+.idea/
+
+# ASP.NET / Frontend
+wwwroot/lib/
