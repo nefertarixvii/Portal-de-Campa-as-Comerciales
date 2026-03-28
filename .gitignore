@@ -1,19 +1,36 @@
-# Visual Studio
-.vs/
-*.user
-*.suo
-*.cache
-*.log
-
-# Build
+# Build Folders
 bin/
 obj/
-*.dll
 *.exe
+*.dll
 *.pdb
 
-# Rider
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache
+.vs/
+.vscode/
+
+# Rider cache
 .idea/
 
-# ASP.NET / Frontend
-wwwroot/lib/
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.swp
+
+# Publish folder
+publish/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Temporary ASP.NET files
+App_Data/
