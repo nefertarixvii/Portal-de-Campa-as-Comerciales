@@ -94,3 +94,4 @@ C:\Users\ar\PortalCampanas\obj\Debug\net9.0\refint\PortalCampanas.dll
 C:\Users\ar\PortalCampanas\obj\Debug\net9.0\PortalCampanas.pdb
 C:\Users\ar\PortalCampanas\obj\Debug\net9.0\PortalCampanas.genruntimeconfig.cache
 C:\Users\ar\PortalCampanas\obj\Debug\net9.0\ref\PortalCampanas.dll
+C:\Users\ar\PortalCampanas\obj\Debug\net9.0\PortalCampanas.sourcelink.json
