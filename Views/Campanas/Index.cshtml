@@ -9,7 +9,7 @@
         <th>Estado</th>
         <th>Canal</th>
         <th>Descuento</th>
-        <th>Acciones</th>
+        <th>Acción</th>
     </tr>
 
 @foreach (var c in Model)
@@ -21,7 +21,7 @@
         <td>@c.Canal</td>
         <td>@c.DescuentoPct %</td>
         <td>
-            <a asp-action="Detalle" asp-route-id="@c.Id">Ver detalle</a>
+            <a href="/Campanas/Detalle/@c.Id">Ver detalle</a>
         </td>
     </tr>
 }

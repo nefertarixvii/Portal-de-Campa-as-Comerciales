@@ -13,17 +13,4 @@ public class CampanasController : Controller
     {
         return View(campanias);
     }
-
-    public IActionResult Detalle(int id)
-{
-    var campania = campanias.FirstOrDefault(c => c.Id == id);
-
-    if (campania == null)
-    {
-        return NotFound();
-    }
-
-    return View(campania);
 }
-}
-
