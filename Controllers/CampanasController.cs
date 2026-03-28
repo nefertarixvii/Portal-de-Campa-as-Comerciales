@@ -34,5 +34,29 @@ public class CampanasController : Controller
     return View(campana);
     }
 
+    public IActionResult Resumen()
+    {
+        var total = campanias.Count;
+        var vigentes = campanias.Count(c => c.Estado == "Vigente");
+        var proximas = campanias.Count(c => c.Estado == "Próxima");
+        var promedio = campanias.Average(c => c.DescuentoPct);
+
+        var porCanal = campanias
+            .GroupBy(c => c.Canal)
+            .Select(g => new {
+                Canal = g.Key,
+             Cantidad = g.Count()
+            })
+            .ToList();
+
+        ViewData["total"] = total;
+        ViewData["vigentes"] = vigentes;
+        ViewData["proximas"] = proximas;
+        ViewData["promedio"] = promedio;
+        ViewData["porCanal"] = porCanal;
+
+        return View();
+    }
+
     
 }
