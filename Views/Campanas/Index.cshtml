@@ -1,7 +1,16 @@
 @model List<PortalCampanas.Models.Campania>
 
 <h2>Listado de Campañas</h2>
+<form method="get" asp-action="Index" style="margin-bottom:20px;">
+    <label>Categoría:</label>
+    <input type="text" name="categoria" value="@ViewData["categoria"]" />
 
+    <label>Estado:</label>
+    <input type="text" name="estado" value="@ViewData["estado"]" />
+
+    <button type="submit">Filtrar</button>
+    <a href="/Campanas/Index">Limpiar</a>
+</form>
 <table border="1">
     <tr>
         <th>Nombre</th>
