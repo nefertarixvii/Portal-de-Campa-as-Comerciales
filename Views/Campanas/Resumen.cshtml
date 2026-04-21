@@ -1,0 +1,25 @@
+<h2>Resumen de Campañas</h2>
+
+<p><strong>Total campañas:</strong> @ViewData["total"]</p>
+<p><strong>Campañas vigentes:</strong> @ViewData["vigentes"]</p>
+<p><strong>Campañas próximas:</strong> @ViewData["proximas"]</p>
+<p><strong>Promedio de descuento:</strong> @ViewData["promedio"] %</p>
+
+<h3>Cantidad por canal</h3>
+
+<table border="1">
+    <tr>
+        <th>Canal</th>
+        <th>Cantidad</th>
+    </tr>
+
+@foreach (var item in (IEnumerable<dynamic>)ViewData["porCanal"])
+{
+    <tr>
+        <td>@item.Canal</td>
+        <td>@item.Cantidad</td>
+    </tr>
+}
+</table>
+
+<a href="/Campanas">Volver</a>
